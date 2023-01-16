@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2022.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    span.Apple-tab-span {white-space:pre}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;My Input Output Page&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let type_of_install = prompt("Is this intended for Cameras or Access Control?: ");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (type_of_install === "Cameras" || type_of_install === "cameras") {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let new_cameras = prompt("Number of new cameras: ");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>let rip_replace_cameras = prompt("Number of rip and replace cameras: ");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let total_cams = parseInt(new_cameras) + parseInt(rip_replace_cameras);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let misc_cost = total_cams * 25;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>//price confirmation variables</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let new_cam_cable = parseInt(new_cameras) * 365;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let new_cam_install = parseInt(new_cameras) * 240;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let old_cam_install = parseInt(rip_replace_cameras) * 345;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// output the number of new cameras and the string "of (Cabling - IP Security Cameras"</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.write("&lt;br&gt;&lt;br&gt;Insert the following information under the heading of ''&lt;br&gt;&lt;br&gt;");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.write(new_cameras + " of 'Cabling - IP Security Cameras' ($" + new_cam_cable + " total price pre-discount)&lt;br&gt;");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.write(new_cameras + " of 'IP Camera Installation' ($" + new_cam_install + " total price pre-discount)&lt;br&gt;");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.write(rip_replace_cameras + " of 'IP Camera (Rip and Replace) Installation' ($" + old_cam_install + " total price pre-discount)&lt;br&gt;");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.write("Total rate for 'Miscellaneous Parts/Materials' ($" + misc_cost +" pre-discount)&lt;br&gt;");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.write("&lt;br&gt;Add all necessary camera mounts seen from the 'Bill of Materials' export on reports from system surveyor&lt;br&gt;");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.write("Reminder to add a license for each camera&lt;br&gt;");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.write("Reminder to add correct type of lift (if needed)&lt;br&gt;");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let ac41 = prompt("Number of AC41 door controllers: ");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let ac62 = prompt("Number of AC62 door controllers (put 0 if none): ");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let cable_runs = prompt("Number of composite cable runs: ");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let conduit_length = prompt("Total feet of conduit being run (put 0 if none): ");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let total_doors = prompt("Number of total doors: ");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let cutting_strikes = prompt("Total number of 1500, 8000, and 8500 strikes we are installing: ");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let conduit_labor = parseInt(conduit_length) / 10;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let checker = false;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (parseInt(total_doors) &gt; (parseInt(ac41) * 4)) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>checker = true;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>checker = false;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>// price confirmation variables for access control</p>
+<p class="p1"><span class="Apple-tab-span">	</span>let cable_runs_tot = parseInt(cable_runs) * 585;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>let ac41_tot = parseInt(ac41) * 1265;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>let ac62_tot = parseInt(ac62) * 1875;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>let total_doors_tot = parseInt(total_doors) * 965;</p>
+<p class="p1"><span class="Apple-tab-span">	</span>let cutting_strikes_tot = parseInt(cutting_strikes) * 455;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-tab-span">	</span>console.log("\n");</p>
+<p class="p1"><span class="Apple-tab-span">	</span>if (checker === true) {</p>
+<p class="p1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>console.log("Sorry, the information inputted is inaccurate. Try again");</p>
+<p class="p1"><span class="Apple-tab-span">	</span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>console.log("Insert the following information under the heading of 'Access Control Hardware | Materials'");</p>
+<p class="p1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>console.log("Reminder to add the 'Miscellaneous Hardware Field'");</p>
+<p class="p1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>console.log("Reminder to add the correct type of conduit and footage length");</p>
+<p class="p1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>console.log("\n");</p>
+<p class="p1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>console.log(cable_runs + " of 'Cabling - Access Control' ($" + cable_runs_tot + " total price pre-discount)");</p>
+<p class="p1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>console.log(ac41 + " of 'Access Control Installation | Labor (AC41 Controllers)' ($" + ac41_tot + " total price pre-discount)");</p>
+<p class="p1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>if (parseInt(ac62) &gt; 0) {</p>
+<p class="p1"><span class="Apple-converted-space">        <span class="Apple-tab-span">	</span></span>console.log(ac62 + " of 'Access Control Installation | Labor (AC62 Controllers)' ($" + ac62_tot + " total price pre-discount)");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>console.log(total_doors + " of 'Access Control Installation | Door Devices' ($" + total_doors_tot + " total price pre-discount)");</p>
+<p class="p1"><span class="Apple-tab-span">	</span>if (parseInt(cutting_strikes) &gt; 0) {</p>
+<p class="p1"><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span>console.log(cutting_strikes + " of Access Control Installation | Labor (Cutting Strikes)' ($" + cutting_strikes_tot + " total price pre-discount)")</p>
+<p class="p1"><span class="Apple-tab-span">	</span>}</p>
+<p class="p1"><span class="Apple-tab-span">	</span>console.log(conduit_labor + " of 'Conduit Labor | Installation' (TBD)”)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;<span class="Apple-converted-space">     </span></p>
+</body>
+</html>
